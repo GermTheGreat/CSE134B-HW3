@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Jeremy</title>
+    <link rel="icon" href="media/favicon-32x32.png" type="image/png">
+    <style>
+        header,
+        nav,
+        main,
+        section,
+        article,
+        footer,
+        form,
+        fieldset,
+        dialog,
+        img {
+            border: 1px solid black;
+        }
+
+        status-badge {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 0.1em 0.6em;
+        }
+
+        status-badge[data-status="complete"] {
+            font-style: italic;
+        }
+
+        status-badge[data-status="in-progress"] {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Projects</h1>
+        <svg width="100%" height="4" aria-hidden="true">
+            <line x1="0" y1="2" x2="100%" y2="2" stroke="black"></line>
+        </svg>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="resume.html">Resume and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Coding Projects</h2>
+            <p>List of my coding projects, from newest to oldest.</p>
+            <ol>
+                <li>
+                    <article>
+                        <h3>Basketball Game Database <status-badge data-status="in-progress">In progress</status-badge></h3>
+                        <p>
+                            <label for="db-progress">Feature progress:</label>
+                            <progress id="db-progress" value="30" max="100">30 of 100</progress>
+                        </p>
+                        <p>A database linking to <em>free</em> full-length basketball games on YouTube.</p>
+                        <p><a href="https://github.com/GermTheGreat/Basketball_Game_Database">GitHub repository</a></p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Wingspan and NBA Advanced Metrics <status-badge
+                                data-status="complete">Complete</status-badge></h3>
+                        <p>A data science project for COGS108 exploring the relationship between wingspan length and
+                            <i>NBA advanced metrics</i>.</p>
+                        <p><a href="https://github.com/COGS108/Group135_WI26">GitHub repository</a></p>
+                    </article>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>Created by Jeremy Liu</p>
+    </footer>
+</body>
+
+</html>
