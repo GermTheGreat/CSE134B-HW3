@@ -1,0 +1,202 @@
+/*Jeremy Liu*/
+/*https://github.com/GermTheGreat/CSE134B-HW3*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --primary-color: rgb(49, 178, 49);
+  --secondary-color: white;
+  --border-radius: 10px;
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: black;
+    line-height: 1.5;
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+}
+
+nav ul{
+    /* Navigation list styling. 
+    This targets the navigation list within the header.
+    Allows the navigation list inside nav to lay out the links as a wrapping flex row*/
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+
+nav a[aria-current="page"] {
+    /* This highlights the current page link in the navigation header */
+    font-weight: bold;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.site-header h1 {
+    /* This targets the main heading within the site header.
+    This is a descendant selector, where the h1 is a descendant of 
+    the .site-header element.*/
+    margin: 0;
+    padding: 0.5rem 2rem 1rem;
+    
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+footer {
+    font-size: 0.7rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    font-family: inherit;
+    border-radius: var(--border-radius);
+}
+
+.status-badge {
+
+    display: inline-block;
+    padding: 0.1em 0.6em;
+}
+
+.status-badge[data-status="complete"] {
+    /* This targets the status badge for items that are complete.
+    It is an attribute selector, as based on the status attribute of the element, 
+    we are able to apply specific styles to these different elements. */
+    font-style: italic;
+    background-color: green;
+    color: var(--secondary-color);
+}
+
+.status-badge[data-status="in-progress"] {
+    /* This targets the status badge for items that are in progress.
+    It is an attribute selector, as based on the status attribute of the element, 
+    we are able to apply specific styles to these different elements. */
+    font-style: italic;
+    background-color: orange;
+    color: var(--secondary-color);
+}
+
+progress {
+    height: 1em;
+    width: 30%;
+    accent-color: var(--primary-color);
+}
+
+input:not([type="checkbox"]), textarea {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: inherit;
+}
+
+iframe {
+    max-width: 100%;
+    width: 100%;
+}
+
+video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    /* This section contains styles for screens with a maximum width of 768px.
+       It adjusts the layout of the navigation and site header for smaller screens, 
+       by unsticking the header at the top of the page, and transforming the navigation 
+       list into a vertical column.*/
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header {
+        position: static;
+    }
+}
+
+article > h3{
+    /* This targets the h3 elements that are direct children of article elements.
+    This is a child selector combinator, where a small dividing line is added below
+    the h3 elements within the article elements, alongside some small padding adjustments.
+    This helps visually separate the headings within the article content.*/
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 200, 255);
+    text-decoration: underline;
+}
+
+.site-header a {
+    color: var(--secondary-color);
+}
+
+.site-header a:hover {
+    color: rgb(157, 255, 0);
+    text-decoration: underline;
+}
+
+a:focus, input:focus, button:focus, textarea:focus, audio:focus, video:focus{
+    outline: 2px solid var(--primary-color);
+}
+
+.site-header a:focus{
+    outline: 2px solid var(--secondary-color);
+}
+
+
